@@ -1,0 +1,163 @@
+/* App.css */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.center {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Drag & Drop Area */
+.drag-drop-area {
+  height: 300px; /* you can also use 100vh for full viewport height */
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border: 3px dashed #0077ff;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.drag-drop-area.drag-over {
+  border-color: #005bb5;
+  background-color: #e6f0ff;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 60%;
+  background-color: #fff;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #0077ff;
+  color: white;
+}
+
+/* Spinner container */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color: #0077ff;
+  font-weight: bold;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 6px solid #f3f3f3; /* Light gray */
+  border-top: 6px solid #0077ff; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+/* Keyframes for spinning */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.file-result {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+.file-result h2 {
+  text-align: center;
+  color: #0077ff;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #0077ff;
+  color: white;
+}
+
+.page-result {
+  margin-bottom: 20px;
+}
+
+.page-result h3 {
+  margin-bottom: 5px;
+  color: #555;
+  text-align: left;
+}
+
+/* Add to your existing CSS */
+
+body, html {
+  min-height: 100%;
+}
+
+.main-container {
+  padding-bottom: 50px; /* space at the bottom */
+}
