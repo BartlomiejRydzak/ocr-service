@@ -54,7 +54,7 @@ function App() {
   // const data = {"file_0":{"page_0":{"PERSONAL_NUMBER":"84103112811","ID_NUMBER":"OF UFD717225 8410319M5007015P0L 841031128118","PLACE_OF_BIRTH":"RZESZÓW","FAMILY_NAME":"KOS","DATE_OF_ISSUE":"OF 08.09.2020","ISSUING_AUTHORITY":"BURMISTRZ MIASTA RZESZOW"}}}
   return (
     <div className="main-container">
-      <h1 className="center">Pass documents to receive extracted data</h1>
+      <h1 className="center">Pass pdf documents to receive extracted data</h1>
 
     <div
       className={`drag-drop-area ${dragOver ? "drag-over" : ""}`}
@@ -93,7 +93,7 @@ function App() {
 
     {render && (
       <div className="render-warning">
-        Render's free plan memory is not enough for image preprocessing. Try cloning GitHub repository{" "}
+        The amout of ram memory available at Render's free plan is not enough for image preprocessing. Try cloning GitHub repository{" "}
         <a href="https://github.com/BartlomiejRydzak/ocr-service.git" target="_blank" rel="noopener noreferrer">
           https://github.com/BartlomiejRydzak/ocr-service.git
         </a>
