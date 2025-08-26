@@ -31,7 +31,7 @@ function App() {
     files.forEach((file) => formData.append("file", file));
 
     try {
-      setLoading(true); // start loading
+      setLoading(true);
       const result = await axios.post(URL + "/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
@@ -45,13 +45,10 @@ function App() {
         console.error(`Error ${error.response.status}:`, error.response.data);
       }
     } finally {
-      setLoading(false); // stop loading
+      setLoading(false);
     }
   };
 
-
-
-  // const data = {"file_0":{"page_0":{"PERSONAL_NUMBER":"84103112811","ID_NUMBER":"OF UFD717225 8410319M5007015P0L 841031128118","PLACE_OF_BIRTH":"RZESZÓW","FAMILY_NAME":"KOS","DATE_OF_ISSUE":"OF 08.09.2020","ISSUING_AUTHORITY":"BURMISTRZ MIASTA RZESZOW"}}}
   return (
     <div className="main-container">
       <h1 className="center">Pass pdf documents to receive extracted data</h1>
@@ -103,11 +100,11 @@ function App() {
 
     {Object.entries(data).map(([fileKey, fileValue], fileIndex) => (
       <div key={fileKey} className="file-result">
-        <h2>{`File: ${files[fileIndex]?.name || fileKey}`}</h2> {/* show uploaded file name if available */}
+        <h2>{`File: ${files[fileIndex]?.name || fileKey}`}</h2> 
 
         {Object.entries(fileValue).map(([pageKey, pageValue], pageIndex) => (
           <div key={pageKey} className="page-result">
-            <h3>{`Page: ${pageIndex + 1}`}</h3> {/* display page number */}
+            <h3>{`Page: ${pageIndex + 1}`}</h3> 
 
             <table border="1">
               <thead>

@@ -1,5 +1,3 @@
-/* App.css */
-
 body, html {
   height: 100%;
   margin: 0;
@@ -13,9 +11,8 @@ body, html {
   color: #333;
 }
 
-/* Drag & Drop Area */
 .drag-drop-area {
-  height: 300px; /* you can also use 100vh for full viewport height */
+  height: 300px;
   margin: 20px auto;
   padding: 20px;
   width: 80%;
@@ -87,7 +84,6 @@ th {
   color: white;
 }
 
-/* Spinner container */
 .spinner-container {
   display: flex;
   flex-direction: column;
@@ -97,10 +93,9 @@ th {
   font-weight: bold;
 }
 
-/* Spinner animation */
 .spinner {
-  border: 6px solid #f3f3f3; /* Light gray */
-  border-top: 6px solid #0077ff; /* Blue */
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #0077ff;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -108,7 +103,6 @@ th {
   margin-bottom: 10px;
 }
 
-/* Keyframes for spinning */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -152,23 +146,21 @@ th {
   text-align: left;
 }
 
-/* Add to your existing CSS */
-
 body, html {
   min-height: 100%;
 }
 
 .main-container {
-  padding-bottom: 50px; /* space at the bottom */
+  padding-bottom: 50px;
 }
 
 .render-warning {
   margin: 20px auto;
   padding: 15px 20px;
   max-width: 600px;
-  border-left: 5px solid #ff4d4f; /* red accent */
-  background-color: #fff1f0;       /* light red background */
-  color: #a8071a;                  /* dark red text */
+  border-left: 5px solid #ff4d4f; 
+  background-color: #fff1f0; 
+  color: #a8071a;           
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
@@ -179,5 +171,5 @@ body, html {
 .render-warning a {
   color: #a8071a;
   text-decoration: underline;
-  word-break: break-all; /* handle long URLs */
+  word-break: break-all; 
 }
