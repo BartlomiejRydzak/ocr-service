@@ -9,7 +9,7 @@ function App() {
   const [dragOver, setDragOver] = useState(false);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  const [render, setRender] = useState(false);
 
 
   const handleFileChange = (event) => {
@@ -23,6 +23,8 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setRender(false)
+
     if (files.length === 0) return alert("Please select or drop files first!");
 
     const formData = new FormData();
@@ -36,7 +38,12 @@ function App() {
       console.log(result.data);
       setData(result.data);
     } catch (error) {
-      console.error("Upload failed:", error);
+      if (error.response.status === 500) {
+        console.error("Server error (500):", error.response.data);
+        setRender(true)
+      } else {
+        console.error(`Error ${error.response.status}:`, error.response.data);
+      }
     } finally {
       setLoading(false); // stop loading
     }
@@ -83,6 +90,16 @@ function App() {
         <p>Uploading and processing files, please wait...</p>
       </div>
     )}
+
+    {render && (
+      <div className="render-warning">
+        Render's free plan memory is not enough for image preprocessing. Try cloning GitHub repository{" "}
+        <a href="https://github.com/BartlomiejRydzak/ocr-service.git" target="_blank" rel="noopener noreferrer">
+          https://github.com/BartlomiejRydzak/ocr-service.git
+        </a>
+      </div>
+    )}
+
 
     {Object.entries(data).map(([fileKey, fileValue], fileIndex) => (
       <div key={fileKey} className="file-result">
